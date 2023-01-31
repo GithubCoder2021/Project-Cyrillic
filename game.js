@@ -102,6 +102,19 @@ function buyADim8(){
     game.ADimCost[8] = game.ADimCost[8].mul(1.5);
    }
 }
+function hardReset(){
+  game.A = new OmegaNum(10);
+  game.APerSec= new OmegaNum(0);
+  game.ADimensions= [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]; //A Dimension Names (added null for less confusion)
+  game.ADimCost= [null, new OmegaNum(10), new OmegaNum(100), new OmegaNum(10000), new OmegaNum(1e6),new OmegaNum(1e8), new OmegaNum(1e10), new OmegaNum(1e12), new OmegaNum(1e15)]; // A Dimemsion Costs
+  game.ADim1=new OmegaNum(0);
+  game.ADim2=new OmegaNum(0);
+  game.ADim3= new OmegaNum(0);
+  game.ADim4= new OmegaNum(0);
+  game.ADim5= new OmegaNum(0);
+  game.ADim6= new OmegaNum(0);
+  game.ADim7= new OmegaNum(0);
+  game.ADim8= new OmegaNum(0);
+}
 
-
-
+load();
