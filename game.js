@@ -23,10 +23,10 @@ setInterval (function(){
   game.ADim5 = game.ADim5.add(game.ADim6.div(100));
   game.ADim6 = game.ADim6.add(game.ADim7.div(100));
   game.ADim7 = game.ADim7.add(game.ADim8.div(100));
-  document.getElementById("A").innerText = game.A.floor.toString();
-  document.getElementById("APS").innerText = game.APerSec.floor.toString();
-  document.getElementById("ADim1").innerText = game.ADim1.floor.toString();
-  document.getElementById("ADimCost1").innerText = game.ADimCost[1].floor.toString();
+  document.getElementById("A").innerText = game.A.round().toString();
+  document.getElementById("APS").innerText = game.APerSec.round().toString();
+  document.getElementById("ADim1").innerText = game.ADim1.round().toString();
+  document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
 
 }, 10)
 
