@@ -116,5 +116,3 @@ function hardReset(){
   game.ADim7= new OmegaNum(0);
   game.ADim8= new OmegaNum(0);
 }
-
-load();
