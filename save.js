@@ -44,7 +44,7 @@ function save() {
 
 function load() {
   if (localStorage.getItem("cyrillic")) {
-    savegame = JSON.parse(localStorage.getItem("inc-tourn-yaht"));
+    savegame = JSON.parse(localStorage.getItem("cyrillic"));
     objectToDecimal(savegame);
     merge(game, savegame);
   }
