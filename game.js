@@ -65,4 +65,27 @@ function buyADim5(){
     game.ADimCost[5] = game.ADimCost[5].mul(1.5)
    }
 }
+function buyADim6(){
+  if (OmegaNum.gte(game.A,game.ADimCost[6])) {
+    game.A = game.A.minus(game.ADimCost[6]);
+    game.ADim6 = game.ADim6.add(1);
+    game.ADimCost[6] = game.ADimCost[36.mul(1.5)
+   }
+}
+function buyADim7(){
+  if (OmegaNum.gte(game.A,game.ADimCost[7])) {
+    game.A = game.A.minus(game.ADimCost[7]);
+    game.ADim7 = game.ADim7.add(1);
+    game.ADimCost[7] = game.ADimCost[7].mul(1.5)
+   }
+}
+function buyADim8(){
+  if (OmegaNum.gte(game.A,game.ADimCost[8])) {
+    game.A = game.A.minus(game.ADimCost[8]);
+    game.ADim8 = game.ADim8.add(1);
+    game.ADimCost[8] = game.ADimCost[8].mul(1.5)
+   }
+}
+
+
 
