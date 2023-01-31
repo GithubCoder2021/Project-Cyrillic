@@ -11,7 +11,7 @@ game = {
   ADim6: new OmegaNum(0),
   ADim7: new OmegaNum(0),
   ADim8: new OmegaNum(0)
-}
+};
 
 setInterval (function(){
   game.A = game.A.add(game.ADim1);
@@ -28,10 +28,11 @@ setInterval (function(){
   document.getElementById("ADim1").innerText = game.ADim1.round().toString();
   document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
 
-}, 10)
+}, 10);
 
 function buyADim1(){
   if (OmegaNum.gte(game.A,game.ADimCost[1])) {
     game.A = game.A.minus(game.ADimCost[1]);
     game.ADim1 = game.ADim1.add(1);
+   }
 }
