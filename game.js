@@ -16,19 +16,18 @@ game = {
 setInterval (function(){
   game.A = game.A.add(game.ADim1);
   game.APerSec = game.ADim1;
-  game.ADim1 = game.ADim1.add(game.ADim2.div(100));
-  game.ADim2 = game.ADim2.add(game.ADim3.div(100));
-  game.ADim3 = game.ADim3.add(game.ADim4.div(100));
-  game.ADim4 = game.ADim4.add(game.ADim5.div(100));
-  game.ADim5 = game.ADim5.add(game.ADim6.div(100));
-  game.ADim6 = game.ADim6.add(game.ADim7.div(100));
-  game.ADim7 = game.ADim7.add(game.ADim8.div(100));
+  game.ADim1 = game.ADim1.add(game.ADim2);
+  game.ADim2 = game.ADim2.add(game.ADim3);
+  game.ADim3 = game.ADim3.add(game.ADim4);
+  game.ADim4 = game.ADim4.add(game.ADim5);
+  game.ADim5 = game.ADim5.add(game.ADim6);
+  game.ADim6 = game.ADim6.add(game.ADim7);
+  game.ADim7 = game.ADim7.add(game.ADim8);
   document.getElementById("A").innerText = game.A.round().toString();
   document.getElementById("APS").innerText = game.APerSec.round().toString();
   document.getElementById("ADim1").innerText = game.ADim1.round().toString();
   document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
-
-}, 10);
+}, 1000);
 
 function buyADim1(){
   if (OmegaNum.gte(game.A,game.ADimCost[1])) {
