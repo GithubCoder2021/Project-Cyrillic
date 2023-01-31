@@ -14,10 +14,6 @@ game = {
 };
 
 setInterval (function(){
-  document.getElementById("A").innerText = game.A.round().toString();
-  document.getElementById("APS").innerText = game.APerSec.round().toString();
-  document.getElementById("ADim1").innerText = game.ADim1.round().toString();
-  document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
   game.A = game.A.add(game.ADim1);
   game.APerSec = game.ADim1;
   game.ADim1 = game.ADim1.add(game.ADim2);
@@ -27,8 +23,28 @@ setInterval (function(){
   game.ADim5 = game.ADim5.add(game.ADim6);
   game.ADim6 = game.ADim6.add(game.ADim7);
   game.ADim7 = game.ADim7.add(game.ADim8);
-  
 }, 1000);
+
+setInterval (function(){
+  document.getElementById("A").innerText = game.A.round().toString();
+  document.getElementById("APS").innerText = game.APerSec.round().toString();
+  document.getElementById("ADim1").innerText = game.ADim1.round().toString();
+  document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
+  document.getElementById("ADim2").innerText = game.ADim2.round().toString();
+  document.getElementById("ADimCost2").innerText = game.ADimCost[2].round().toString();
+  document.getElementById("ADim3").innerText = game.ADim3.round().toString();
+  document.getElementById("ADimCost3").innerText = game.ADimCost[3].round().toString();
+  document.getElementById("ADim4").innerText = game.ADim4.round().toString();
+  document.getElementById("ADimCost4").innerText = game.ADimCost[4].round().toString();
+  document.getElementById("ADim5").innerText = game.ADim5.round().toString();
+  document.getElementById("ADimCost5").innerText = game.ADimCost[5].round().toString();
+  document.getElementById("ADim6").innerText = game.ADim6.round().toString();
+  document.getElementById("ADimCost6").innerText = game.ADimCost[6].round().toString();
+  document.getElementById("ADim7").innerText = game.ADim7.round().toString();
+  document.getElementById("ADimCost7").innerText = game.ADimCost[7].round().toString();
+  document.getElementById("ADim7").innerText = game.ADim8.round().toString();
+  document.getElementById("ADimCost8").innerText = game.ADimCost[8].round().toString();
+}, 10);
 
 function buyADim1(){
   if (OmegaNum.gte(game.A,game.ADimCost[1])) {
