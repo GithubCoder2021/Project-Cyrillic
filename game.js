@@ -50,56 +50,56 @@ function buyADim1(){
   if (OmegaNum.gte(game.A,game.ADimCost[1])) {
     game.A = game.A.minus(game.ADimCost[1]);
     game.ADim1 = game.ADim1.add(1);
-    game.ADimCost[1] = game.ADimCost[1].mul(1.5)
+    game.ADimCost[1] = game.ADimCost[1].mul(1.5);
    }
 }
 function buyADim2(){
   if (OmegaNum.gte(game.A,game.ADimCost[2])) {
     game.A = game.A.minus(game.ADimCost[2]);
     game.ADim2 = game.ADim2.add(1);
-    game.ADimCost[2] = game.ADimCost[2].mul(1.5)
+    game.ADimCost[2] = game.ADimCost[2].mul(1.5);
    }
 }
 function buyADim3(){
   if (OmegaNum.gte(game.A,game.ADimCost[3])) {
     game.A = game.A.minus(game.ADimCost[3]);
     game.ADim3 = game.ADim3.add(1);
-    game.ADimCost[3] = game.ADimCost[3].mul(1.5)
+    game.ADimCost[3] = game.ADimCost[3].mul(1.5);
    }
 }
 function buyADim4(){
   if (OmegaNum.gte(game.A,game.ADimCost[4])) {
     game.A = game.A.minus(game.ADimCost[4]);
     game.ADim4 = game.ADim4.add(1);
-    game.ADimCost[4] = game.ADimCost[4].mul(1.5)
+    game.ADimCost[4] = game.ADimCost[4].mul(1.5);
    }
 }
 function buyADim5(){
   if (OmegaNum.gte(game.A,game.ADimCost[5])) {
     game.A = game.A.minus(game.ADimCost[5]);
     game.ADim5 = game.ADim5.add(1);
-    game.ADimCost[5] = game.ADimCost[5].mul(1.5)
+    game.ADimCost[5] = game.ADimCost[5].mul(1.5);
    }
 }
 function buyADim6(){
   if (OmegaNum.gte(game.A,game.ADimCost[6])) {
     game.A = game.A.minus(game.ADimCost[6]);
     game.ADim6 = game.ADim6.add(1);
-    game.ADimCost[6] = game.ADimCost[36.mul(1.5)
+    game.ADimCost[6] = game.ADimCost[6].mul(1.5);
    }
 }
 function buyADim7(){
   if (OmegaNum.gte(game.A,game.ADimCost[7])) {
     game.A = game.A.minus(game.ADimCost[7]);
     game.ADim7 = game.ADim7.add(1);
-    game.ADimCost[7] = game.ADimCost[7].mul(1.5)
+    game.ADimCost[7] = game.ADimCost[7].mul(1.5);
    }
 }
 function buyADim8(){
   if (OmegaNum.gte(game.A,game.ADimCost[8])) {
     game.A = game.A.minus(game.ADimCost[8]);
     game.ADim8 = game.ADim8.add(1);
-    game.ADimCost[8] = game.ADimCost[8].mul(1.5)
+    game.ADimCost[8] = game.ADimCost[8].mul(1.5);
    }
 }
 
