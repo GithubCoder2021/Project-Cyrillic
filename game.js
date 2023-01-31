@@ -14,6 +14,10 @@ game = {
 };
 
 setInterval (function(){
+  document.getElementById("A").innerText = game.A.round().toString();
+  document.getElementById("APS").innerText = game.APerSec.round().toString();
+  document.getElementById("ADim1").innerText = game.ADim1.round().toString();
+  document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
   game.A = game.A.add(game.ADim1);
   game.APerSec = game.ADim1;
   game.ADim1 = game.ADim1.add(game.ADim2);
@@ -23,10 +27,7 @@ setInterval (function(){
   game.ADim5 = game.ADim5.add(game.ADim6);
   game.ADim6 = game.ADim6.add(game.ADim7);
   game.ADim7 = game.ADim7.add(game.ADim8);
-  document.getElementById("A").innerText = game.A.round().toString();
-  document.getElementById("APS").innerText = game.APerSec.round().toString();
-  document.getElementById("ADim1").innerText = game.ADim1.round().toString();
-  document.getElementById("ADimCost1").innerText = game.ADimCost[1].round().toString();
+  
 }, 1000);
 
 function buyADim1(){
