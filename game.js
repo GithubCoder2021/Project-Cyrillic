@@ -12,3 +12,15 @@ game = {
   ADim7: new OmegaNum(0),
   ADim8: new OmegaNum(0)
 }
+
+setInterval (function(){
+  game.A = game.A.add(game.ADim1);
+  game.APerSec = game.ADim1;
+  game.ADim1 = game.ADim1.add(game.ADim2);
+  game.ADim2 = game.ADim2.add(game.ADim3);
+  game.ADim3 = game.ADim3.add(game.ADim4);
+  game.ADim4 = game.ADim4.add(game.ADim5);
+  game.ADim5 = game.ADim5.add(game.ADim6);
+  game.ADim6 = game.ADim6.add(game.ADim7);
+  game.ADim7 = game.ADim7.add(game.ADim8);
+}, 1000)
