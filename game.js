@@ -2,7 +2,7 @@ game = {
   A: new OmegaNum(10), //Ammount of A you have,
   APerSec: new OmegaNum(0),
   ADimensions: [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"], //A Dimension Names (added null for less confusion)
-  ADimCost: [null, new OmegaNum(10), new OmegaNum(100), new OmegaNum(10000), new OmegaNum(1e6),new OmegaNum(1e8), new OmegaNum(1e10), new OmegaNum(1e12), new OmegaNum(1e15)], // A Dimemsion Costs
+  ADimCost: [null, new OmegaNum(10), new OmegaNum(100), new OmegaNum(10000), new OmegaNum(1e6),new OmegaNum(1e8), new OmegaNum(1e10), new OmegaNum(1e12), new OmegaNum(1e15)],// A Dimemsion Costs
   ADim1: new OmegaNum(0),
   ADim2: new OmegaNum(0),
   ADim3: new OmegaNum(0),
@@ -10,12 +10,16 @@ game = {
   ADim5: new OmegaNum(0),
   ADim6: new OmegaNum(0),
   ADim7: new OmegaNum(0),
-  ADim8: new OmegaNum(0)
+  ADim8: new OmegaNum(0),
+  БGain: new OmegaNum(0),
+  Б: new OmegaNum(0),
+  tickspeed: new OmegaNum(1),
+  tickspeedCost: new OmegaNum(1000)
 };
 
 setInterval (function(){
   game.A = game.A.add(game.ADim1);
-  game.APerSec = game.ADim1;
+  game.APerSec = game.ADim1.mul(game.tickspeed);
   game.ADim1 = game.ADim1.add(game.ADim2);
   game.ADim2 = game.ADim2.add(game.ADim3);
   game.ADim3 = game.ADim3.add(game.ADim4);
@@ -42,8 +46,10 @@ setInterval (function(){
   document.getElementById("ADimCost6").innerText = game.ADimCost[6].round().toString();
   document.getElementById("ADim7").innerText = game.ADim7.round().toString();
   document.getElementById("ADimCost7").innerText = game.ADimCost[7].round().toString();
-  document.getElementById("ADim7").innerText = game.ADim8.round().toString();
+  document.getElementById("ADim8").innerText = game.ADim8.round().toString();
   document.getElementById("ADimCost8").innerText = game.ADimCost[8].round().toString();
+  document.getElementById("tick").innerText = game.tickspeed.toString();
+  document.getElementById("tickCost").innerText = game.tickspeedCost.round().toString();
 }, 10);
 
 function buyADim1(){
@@ -102,17 +108,10 @@ function buyADim8(){
     game.ADimCost[8] = game.ADimCost[8].mul(1.5);
    }
 }
-function hardReset(){
-  game.A = new OmegaNum(10);
-  game.APerSec= new OmegaNum(0);
-  game.ADimensions= [null, "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"]; //A Dimension Names (added null for less confusion)
-  game.ADimCost= [null, new OmegaNum(10), new OmegaNum(100), new OmegaNum(10000), new OmegaNum(1e6),new OmegaNum(1e8), new OmegaNum(1e10), new OmegaNum(1e12), new OmegaNum(1e15)]; // A Dimemsion Costs
-  game.ADim1=new OmegaNum(0);
-  game.ADim2=new OmegaNum(0);
-  game.ADim3= new OmegaNum(0);
-  game.ADim4= new OmegaNum(0);
-  game.ADim5= new OmegaNum(0);
-  game.ADim6= new OmegaNum(0);
-  game.ADim7= new OmegaNum(0);
-  game.ADim8= new OmegaNum(0);
+function upgTickspeed(){
+  if (OmegaNum.gte(game.A,game.tickspeedCost)) {
+    game.A = game.A.minus(game.tickspeedCost);
+    game.tickspeed = game.tickspeed.mul(1.5);
+    game.tickspeedCost = game.ADimCost[8].mul(10);
+   }
 }
