@@ -18,7 +18,7 @@ game = {
 };
 
 setInterval (function(){
-  game.A = game.A.add(game.ADim1);
+  game.A = game.A.add(game.ADim1.div(10));
   game.APerSec = game.ADim1.mul(game.tickspeed);
   game.ADim1 = game.ADim1.add(game.ADim2.div(10));
   game.ADim2 = game.ADim2.add(game.ADim3.div(10));
