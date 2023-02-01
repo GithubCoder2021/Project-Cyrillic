@@ -112,6 +112,6 @@ function upgTickspeed(){
   if (OmegaNum.gte(game.A,game.tickspeedCost)) {
     game.A = game.A.minus(game.tickspeedCost);
     game.tickspeed = game.tickspeed.mul(1.5);
-    game.tickspeedCost = game.ADimCost[8].mul(10);
+    game.tickspeedCost = game.tickspeedCost.mul(10);
    }
 }
