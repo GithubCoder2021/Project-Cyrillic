@@ -20,14 +20,14 @@ game = {
 setInterval (function(){
   game.A = game.A.add(game.ADim1);
   game.APerSec = game.ADim1.mul(game.tickspeed);
-  game.ADim1 = game.ADim1.add(game.ADim2);
-  game.ADim2 = game.ADim2.add(game.ADim3);
-  game.ADim3 = game.ADim3.add(game.ADim4);
-  game.ADim4 = game.ADim4.add(game.ADim5);
-  game.ADim5 = game.ADim5.add(game.ADim6);
-  game.ADim6 = game.ADim6.add(game.ADim7);
-  game.ADim7 = game.ADim7.add(game.ADim8);
-}, 1000);
+  game.ADim1 = game.ADim1.add(game.ADim2.div(10));
+  game.ADim2 = game.ADim2.add(game.ADim3.div(10));
+  game.ADim3 = game.ADim3.add(game.ADim4.div(10));
+  game.ADim4 = game.ADim4.add(game.ADim5.div(10));
+  game.ADim5 = game.ADim5.add(game.ADim6.div(10));
+  game.ADim6 = game.ADim6.add(game.ADim7.div(10));
+  game.ADim7 = game.ADim7.add(game.ADim8.div(10));
+}, 100);
 
 setInterval (function(){
   document.getElementById("A").innerText = game.A.round().toString();
