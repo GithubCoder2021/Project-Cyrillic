@@ -120,7 +120,7 @@ function upgTickspeed(){
 
 setInterval (function(){
   if (OmegaNum.gte(game.A,1e17)){
-       game.БGain = OmegaNum.log10(game.A).minus(17);
+       game.БGain = OmegaNum.log10(game.A).minus(16);
        document.getElementById("behgain").style.display = "inline-block";
       } else {
        document.getElementById("behgain").style.display = "none";
