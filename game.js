@@ -121,9 +121,9 @@ function gainBeh(){
   if (OmegaNum.gte(game.A,1e21)){
        game.БGain = OmegaNum.log10(game.A).minus(21);
        document.getElementById("behgain").style.display = "inline-block";
-      } else{
-    document.getElementById("behgain").style.display = "none";
-    game.БGain = new OmegaNum(0);
+      } else {
+       document.getElementById("behgain").style.display = "none";
+       game.БGain = new OmegaNum(0);
   }
     
 }
