@@ -50,7 +50,7 @@ setInterval (function(){
   document.getElementById("ADimCost8").innerText = game.ADimCost[8].round().toString();
   document.getElementById("tick").innerText = game.tickspeed.toString();
   document.getElementById("tickCost").innerText = game.tickspeedCost.round().toString();
-  document.getElementById("beGain").innerText = game.БGain.round().toString)
+  document.getElementById("beGain").innerText = game.БGain.round().toString;
 }, 10);
 
 function buyADim1(){
@@ -117,7 +117,8 @@ function upgTickspeed(){
    }
 }
 
-function gainBeh(){
+
+setInterval (function(){
   if (OmegaNum.gte(game.A,1e21)){
        game.БGain = OmegaNum.log10(game.A).minus(21);
        document.getElementById("behgain").style.display = "inline-block";
@@ -125,5 +126,4 @@ function gainBeh(){
        document.getElementById("behgain").style.display = "none";
        game.БGain = new OmegaNum(0);
   }
-    
-}
+}, 10)
