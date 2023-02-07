@@ -131,50 +131,50 @@ setInterval (function(){
 
 
 function save() {
-	localStorage.setItem("cyrillic", JSON.stringify(game))
+	localStorage.setItem("cyrillic", JSON.stringify(game));
 }
 
 //setInterval(save, 5000)
 
 function exportGame() {
-  save()
+  save();
   navigator.clipboard.writeText(btoa(JSON.stringify(game))).then(function() {
-    alert("Copied to clipboard!")
+    alert("Copied to clipboard!");
   }, function() {
-    alert("Error copying to clipboard, try again...")
+
   });
 }
 
 function importGame() {
-  loadgame = JSON.parse(atob(prompt("Input your save here:")))
+  loadgame = JSON.parse(atob(prompt("Input your save here:")));
   if (loadgame && loadgame != null && loadgame != "") {
-    reset()
-    loadGame(loadgame)
-    save()
+    reset();
+    loadGame(loadgame);
+    save();
   }
   else {
-    alert("Invalid input.")
+    alert("Invalid input.");
   }
 }
 
 function load() {
-	reset()
-	let loadgame = JSON.parse(localStorage.getItem("cyrillic"))
+	reset();
+	let loadgame = JSON.parse(localStorage.getItem("cyrillic"));
 	if (loadgame != null) {
-		loadGame(loadgame)
+		loadGame(loadgame);
 	}
 }
 
-load()
+load();
 
-function loadGame(loadgame) {
-  //Sets each variable in 'game' to the equivalent variable in 'loadgame' (the saved file)
+function loadGame(loadgame) { 
   for (i=0; i<Object.keys(loadgame).length; i++) {
-    if (loadgame[Object.keys(loadgame)[i]] != "undefined") {
-      if (typeof loadgame[Object.keys(loadgame)[i]] == "string") {game[Object.keys(loadgame)[i]] = new OmegaNum(loadgame[Object.keys(loadgame)[i]])}
-      else {game[Object.keys(game)[i]] = loadgame[Object.keys(loadgame)[i]]}
+    if (loadgame[Object.keys(loadgame)[i]] != "undefined"); {
+      if (typeof loadgame[Object.keys(loadgame)[i]] == "string") {game[Object.keys(loadgame)[i]] = new OmegaNum(loadgame[Object.keys(loadgame)[i]]);}
+      else {game[Object.keys(game)[i]] = loadgame[Object.keys(loadgame)[i]];}
     }
   }
+}
 
 function reset() {
 
@@ -200,8 +200,8 @@ function reset() {
 }
 function hardReset() {
   if (confirm("Are you sure you want to reset? You will lose everything!")) {
-    reset()
-    save()
-    location.reload()
+    reset();
+    save();
+    location.reload();
   }
 }
